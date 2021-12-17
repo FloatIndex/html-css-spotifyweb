@@ -14,7 +14,7 @@ header.debug {
 }
 
 main.debug {
-    height: 1000px;
+    height: 1500px;
     background-color: blanchedalmond;
 }
 
@@ -79,3 +79,61 @@ footer {
     background-color: rgb(40, 40, 40);
 }
 /* FINE FOOTER */
+
+
+
+
+/* MEDIA QUERY S */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    /* NAV */
+    #side-menu {
+        width: 200px;
+    }
+    /* FINE NAV */
+
+
+    /* MAIN */
+    main {
+        margin-left: 200px;
+    }
+    /* FINE MAIN */
+}
+
+
+
+/* MEDIA QUERY MD */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* NAV */
+    #side-menu {
+        width: 200px;
+    }
+    /* FINE NAV */
+
+
+    /* MAIN */
+    main {
+        margin-left: 200px;
+    }
+    /* FINE MAIN */
+}
+
+
+
+/* MEDIA QUERY LG */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* NAV */
+    #side-menu {
+        width: 200px;
+    }
+    /* FINE NAV */
+
+
+    /* MAIN */
+    main {
+        margin-left: 200px;
+    }
+    /* FINE MAIN */
+}
