@@ -7,13 +7,14 @@
     <title>Spotify</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     
     <!-- inizio header -->
-    <header class="debug">
-
+    <header class="flex">
+        <button type="button">effettua l'upgrade</button>
     </header>
     <!-- fine header -->
 
@@ -39,7 +40,59 @@
 
 
     <!-- inizio footer -->
-    <footer>
+    <footer class="flex">
+
+        <!-- display canzone -->
+        <div class="song flex">
+
+            <div class="album-cover">
+                <img src="img/sinister.jpeg" alt="album cover">
+            </div>
+
+            <div class="song-txt">
+                <p class="album-title">Sinister</p>
+                <p>Brano Nome</p>
+            </div>
+
+            <div class="song-icon">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
+            </div>
+        </div>
+        <!-- fine display canzone -->
+
+        <!-- player-control -->
+        <div class="player-control flex flex-column">
+
+            <div class="player-button flex">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="far fa-play-circle fa-2x"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo-alt"></i>
+            </div>
+
+            <div class="playback-bar flex">
+                <p>0:25</p>
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+                <p>4:35</p>
+            </div>
+
+        </div>
+        <!-- fine player-control -->
+
+        <!-- extra-control -->
+        <div class="extra-control flex">
+            <i class="fas fa-list"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fas fa-volume-up"></i>
+            <div class="bar">
+                <div class="fill"></div>
+            </div>
+        </div>
+        <!-- fine extra-control -->
 
     </footer>
     <!-- fine footer -->
