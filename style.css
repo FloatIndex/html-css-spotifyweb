@@ -7,16 +7,14 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 /* FINE GENERALI */
 
 
 
 /* inizio debug */
-.container {
-    background-color: blanchedalmond;
-}
+
 /* fine debug */
 
 
@@ -29,13 +27,29 @@ body {
 .flex-column {
     flex-direction: column;
 }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.opacity-06 {
+    opacity: 0.6;
+}
+
+.bold {
+    font-weight: bold;
+}
 /* FINE COMUNI */
 
 
 
 /* MAIN */
 main {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
     width: 100%;
 }
 
@@ -45,23 +59,127 @@ main::after {
     clear: both;
 }
 
-main .side-bar {
-    width: 150px;
+/* sidebar */
+main .sidebar {
+    width: 200px;
     height: 100%;
     float: left;
     background-color: #000;
+    padding: 0px 20px;
+    font-size: 0.8em;
 }
 
+/* sidebar-top */
+.sidebar-top {
+    height: calc(100% - 70px);
+    overflow-y: hidden;
+}
+
+.sidebar-top .logo {
+    width: 100%;
+    height: 90px;
+    align-items: center;
+}
+
+.sidebar-top .logo img {
+    width: 130px;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu li:last-child {
+    margin-bottom: 20px;
+}
+
+/* ****************** ALERT COGLIONA ***************** */
+.sidebar-menu li img {
+    width: 25px;
+    height: 25px;
+}
+/* *************************************************** */
+.playlist h4 {
+    text-transform: uppercase;
+}
+
+.playlist .new-playlist {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.playlist .new-playlist button {
+    background-color: rgb(163, 163, 163);
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.new-playlist button span {
+    display: inline-block;
+    transform: scale(2);
+    padding-bottom: 2px;
+    color: #000;
+}
+
+.playlist .playlist-list {
+    height: 35vh;
+    overflow-y: auto;
+} 
+
+.playlist .playlist-list li {
+    padding-top: 20px;
+} 
+
+/* sidebar-bottom */
+.sidebar-bottom {
+    height: 70px;
+}
+
+.sidebar-bottom .download {
+    padding: 5px 0px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.sidebar-bottom .download img {
+    width: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.sidebar-bottom .user {
+    align-items: center;
+}
+
+.sidebar-bottom .user .pro-pic {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.sidebar-bottom .user img {
+    width: 100%;
+    height: 100%;
+}
+
+/* container */
 main .container {
     height: 100%;
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     float: left;
     overflow-y: scroll;
 }
 
 .container .cta {
-    width: 100%;
-    height: 100px;
+    width: calc(100% - 200px);
+    height: 90px;
     position: fixed;
     top: 0;
     right: 0;
@@ -81,7 +199,12 @@ main .container {
 }
 
 .container .content-menu {
-    margin-top: 100px;
+    margin-top: 90px;
+}
+
+/* container */
+main .container {
+    background-color: rgb(21, 25, 34);
 }
 
 /* FINE MAIN */
@@ -90,12 +213,15 @@ main .container {
 
 /* FOOTER */
 footer {
-    height: 100px;
+    height: 90px;
     width: 100%;
     background-color: rgb(40, 40, 40);
     padding: 0px 10px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 footer .song {
@@ -171,7 +297,7 @@ footer .extra-control i {
 /* MEDIA QUERY XS */
 @media only screen and (max-width: 575px) {
 
-    main .side-bar {
+    main .sidebar {
         width: 50px;
     }
 
