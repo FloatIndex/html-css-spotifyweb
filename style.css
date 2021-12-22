@@ -175,6 +175,7 @@ main .container {
     width: calc(100% - 200px);
     float: left;
     overflow-y: scroll;
+    background-color: rgb(21, 25, 34);
 }
 
 .container .cta {
@@ -198,15 +199,35 @@ main .container {
     margin-right: 10px;
 }
 
-.container .content-menu {
+.content .content-top {
     margin-top: 90px;
 }
 
-/* container */
-main .container {
-    background-color: rgb(21, 25, 34);
+.content-top .content-menu {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding-top: 25px;
+    text-align: center;
 }
 
+.content-menu li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.content .content-gallery {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-gallery .card {
+    width: calc(100% / 6);
+}
+
+.content-gallery .card-cover img {
+    width: 100%;
+}
 /* FINE MAIN */
 
 
