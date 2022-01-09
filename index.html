@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,17 +21,23 @@
     <!-- inizio main -->
     <main>
 
-        <nav class="sidebar">
+        <nav class="sidebar font-size-08em">
 
             <!-- sidebare-top -->
             <div class="sidebar-top">
                 
+                <!-- logo -->
                 <div class="logo flex">
-                    <img src="img/logo.svg" alt="logo">
+                    <a href="#"><img src="img/logo.svg" alt="logo"></a>
                 </div>
-    
+                <!-- logo mobile -->
+                <div class="logo-mobile">
+                    <a href="#"><img src="img/logo-small.svg" alt="logo piccolo"></a>
+                </div>
+                
+                <!-- home, cerca, libreria -->
                 <ul class="sidebar-menu">
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <img src="img/home.svg" alt="home">
                             <span>Home</span>
@@ -48,7 +56,8 @@
                         </a>
                     </li>
                 </ul>
-    
+                
+                <!-- playlist -->
                 <div class="playlist">
                     <h4>playlist</h4>
     
@@ -57,14 +66,14 @@
                         <a href="#"><span class="opacity-06">Crea playlist</span></a>
                     </div>
     
-                    <ul class="playlist-list opacity-06">
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
+                    <ul class="playlist-list">
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
+                        <li><a class="opacity-06" href="#">Nome Playlist</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,11 +81,13 @@
 
             <!-- sidebar-bottom -->
             <div class="sidebar-bottom">
-                <div class="download opacity-06">
-                    <img src="img/download.svg" alt="download">
-                    <span>Installa app</span>
-                </div>
+                <!-- download -->
+                <a class="download" href="#">
+                    <img class="opacity-06" src="img/download.svg" alt="download">
+                    <span class="opacity-06">Installa app</span>
+                </a>
 
+                <!-- utente -->
                 <div class="user flex">
                     <div class="pro-pic">
                         <img src="img/profile.svg" alt="profile pic">
@@ -90,118 +101,218 @@
 
         <div class="container">
 
+            <!-- call-to-action fixed -->
             <div class="cta flex">
                 <button type="button">effettua l'upgrade</button>
             </div>
+            <!-- fine call-to-action fixed -->
 
+            <!-- inizio main content -->
             <div class="content">
-                <div class="content-top">
-                    <ul class="content-menu opacity-06">
-                        <li>
-                            <a href="#">in evidenza</a>
-                        </li>
-                        <li>
-                            <a href="#">poadcast</a>
-                        </li>
-                        <li>
-                            <a href="#">classifiche</a>
-                        </li>
-                        <li>
-                            <a href="#">generi e mood</a>
-                        </li>
-                        <li>
-                            <a href="#">nuove uscite</a>
-                        </li>
-                        <li>
-                            <a href="#">scopri</a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- menu in alto -->
+                <ul class="content-menu font-size-08em">
+                    <li class="active">
+                        <a class="opacity-06" href="#">in evidenza</a>
+                    </li>
+                    <li>
+                        <a class="opacity-06" href="#">poadcast</a>
+                    </li>
+                    <li>
+                        <a class="opacity-06" href="#">classifiche</a>
+                    </li>
+                    <li>
+                        <a class="opacity-06" href="#">generi e mood</a>
+                    </li>
+                    <li>
+                        <a class="opacity-06" href="#">nuove uscite</a>
+                    </li>
+                    <li>
+                        <a class="opacity-06" href="#">scopri</a>
+                    </li>
+                </ul>
+                <!-- fine menu in alto -->
 
-                <div class="content-gallery flex flex-column">
+                
+                <!-- sezione recently-played -->
+                <section id="recently-played">
 
-                    <div class="recently-played">
+                    <h2>Recently Played</h2>
 
-                        <h2>Recently Played</h2>
+                    <div class="card-container flex">
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/metal_lifting.jpg" alt="heavy metal">
 
-                        <div class="card-container flex">
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                             </div>
 
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
+                            <div class="card-txt">
+                                <h4>Heavy Metal</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/stranger.jpeg" alt="stranger things">
+
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                             </div>
 
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
+                            <div class="card-txt">
+                                <h4>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
+                                <span class="opacity-06 font-size-08em">Kvle Dixon & Michael Stein</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/aquietplace.jpeg" alt="a quiet place">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                             </div>
 
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
+                            <div class="card-txt">
+                                <h4>A quiet place</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/split.jpeg" alt="split">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                             </div>
 
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
+                            <div class="card-txt">
+                                <h4>Split</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/cure.jpeg" alt="a cure for wellness">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
                             </div>
 
-                            <div class="card">
-                                <div class="card-cover">
-                                    <img src="img/metal_lifting.jpg" alt="">
+                            <div class="card-txt">
+                                <h4>A cure for wellness</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/sinister.jpeg" alt="sinister">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
                                 </div>
-    
-                                <div class="card-txt">
-                                    <h4>Heavy Metal</h4>
-                                    <span class="subtitle opacity-06">Subtitle</span>
-                                </div>
+                            </div>
+
+                            <div class="card-txt">
+                                <h4>Sinister</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
                             </div>
                         </div>
                     </div>
+                </section>
+                <!-- sezione recently-played -->
 
-                    <div class="personalized">
+                <!-- sezione personalized -->
+                <section id="personalized">
 
+                    <h2>Creato per John Doe</h2>
+                    <span class="opacity-06 font-size-08em">Pi&ugrave; ascolti, più accurati saranno i suggerimenti.</span>
+
+                    <div class="card-container flex">
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/radar.jpeg" alt="release radar">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="card-txt">
+                                <h4>Release Radar</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/mixdaily.jpeg" alt="daily mix">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="card-txt">
+                                <h4>Daily Mix 1</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
                     </div>
+                </section>
+                <!-- fine sezione personalized -->
 
-                    <div class="popular">
+                <!-- sezione popular -->
+                <section id="popular">
 
+                    <h2>Artisti pi&ugrave; popolari</h2>
+                    <span class="opacity-06 font-size-08em">Pi&ugrave; ascolti, più accurati saranno i suggerimenti.</span>
+
+                    <div class="card-container flex">
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/youg.jpeg" alt="lana del ray">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="card-txt">
+                                <h4>Lana del Ray</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-cover">
+                                <img src="img/einaudi.jpeg" alt="ludovico einaudi">
+                                
+                                <div class="cover-overlay flex">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="card-txt">
+                                <h4>Ludovico Einaudi</h4>
+                                <span class="opacity-06 font-size-08em">Subtitle</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <!-- fine sezione popular -->
             </div>
+            <!-- fine main content -->
 
         </div>
 
@@ -211,23 +322,25 @@
 
 
     <!-- inizio footer -->
-    <footer class="flex">
+    <footer class="flex font-size-08em">
 
         <!-- display canzone -->
         <div class="song flex">
 
-            <div class="album-cover">
-                <img src="img/sinister.jpeg" alt="album cover">
-            </div>
-
-            <div class="song-txt">
-                <p class="album-title">Sinister</p>
-                <p>Brano Nome</p>
+            <div class="song-container flex">
+                <div class="album-cover">
+                    <img src="img/sinister.jpeg" alt="album cover">
+                </div>
+    
+                <div class="song-txt">
+                    <p><a href="#">Sinister</a></p>
+                    <p><a class="song-name opacity-06" href="#">Brano Nome</a></p>
+                </div>
             </div>
 
             <div class="song-icon">
-                <i class="far fa-heart"></i>
-                <i class="far fa-folder"></i>
+                <a class="opacity-06" href="#"><i class="far fa-heart"></i></a>
+                <a class="opacity-06" href="#"><i class="far fa-folder"></i></a>
             </div>
         </div>
         <!-- fine display canzone -->
@@ -245,8 +358,12 @@
 
             <div class="playback-bar flex">
                 <p>0:25</p>
-                <div class="bar">
-                    <div class="fill"></div>
+                <div class="bar-container"> <!-- per aumentare (tramite padding) l'area cliccabile della barra -->
+                    <div class="bar">
+                        <div class="bar-fill">
+                            <div class="bar-cursor"></div>
+                        </div>
+                    </div>
                 </div>
                 <p>4:35</p>
             </div>
@@ -259,8 +376,12 @@
             <i class="fas fa-list"></i>
             <i class="fas fa-desktop"></i>
             <i class="fas fa-volume-up"></i>
-            <div class="bar">
-                <div class="fill"></div>
+            <div class="bar-container">
+                <div class="bar">
+                    <div class="bar-fill">
+                        <div class="bar-cursor"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- fine extra-control -->
